@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@400;600;700;900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply font-sans antialiased bg-gray-50 text-gray-900 transition-colors duration-300;
+  }
+  
+  body.dark {
+    @apply bg-gray-950 text-gray-100;
+  }
+}
+
+/* Premium UI elements */
+.glass-panel {
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(226, 232, 240, 0.7);
+  box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.02);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.dark .glass-panel {
+  background: rgba(15, 23, 42, 0.55);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.35);
+}
+
+.btn-primary {
+  @apply px-5 py-2.5 bg-indigo-600 text-white font-bold rounded-xl active:scale-[0.97] transition-all duration-200;
+  box-shadow: 0 4px 14px 0 rgba(124, 58, 237, 0.2);
+}
+
+.btn-primary:hover {
+  @apply bg-indigo-700;
+  box-shadow: 0 6px 20px 0 rgba(124, 58, 237, 0.35);
+  transform: translateY(-1px);
+}
+
+.btn-secondary {
+  @apply px-5 py-2.5 bg-gray-100 text-gray-800 font-bold rounded-xl active:scale-[0.97] transition-all duration-200;
+}
+
+.btn-secondary:hover {
+  @apply bg-gray-200;
+  transform: translateY(-1px);
+}
+
+.dark .btn-secondary {
+  @apply bg-gray-800 text-gray-200;
+}
+
+.dark .btn-secondary:hover {
+  @apply bg-gray-700;
+}
+
+/* Premium Hover Card Utilities */
+.hover-lift {
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1), border-color 0.3s ease;
+}
+
+.hover-lift:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px -10px rgba(124, 58, 237, 0.15);
+  border-color: rgba(124, 58, 237, 0.25) !important;
+}
+
+/* Scrollbar styles */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-gray-200 rounded-full hover:bg-gray-300 transition-colors;
+}
+
+.dark ::-webkit-scrollbar-thumb {
+  @apply bg-gray-800 rounded-full hover:bg-gray-700;
+}
+
+/* Background grid patterns for premium look - visual blueprint pattern */
+.bg-grid-pattern {
+  background-size: 32px 32px;
+  background-image: 
+    radial-gradient(circle, rgba(226, 232, 240, 0.6) 1px, transparent 1px);
+}
+
+.dark .bg-grid-pattern {
+  background-image: 
+    radial-gradient(circle, rgba(51, 65, 85, 0.45) 1px, transparent 1px);
+}
+
+/* Out of stock overlays */
+.out-of-stock-text {
+  text-shadow: 0 0 4px rgba(239, 68, 68, 0.3);
+}
+
+.font-display {
+  font-family: 'Inter', 'system-ui', sans-serif;
+}
+
+/* Scroll target padding adjustments to prevent sticky navbar overlaps */
+#about-section, 
+#contact-footer, 
+#feedback-section {
+  scroll-margin-top: 90px;
+}
+
