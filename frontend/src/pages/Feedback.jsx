@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { useAuth } from '../context/AuthContext';
+import { useAuth, API_URL } from '../context/AuthContext';
 import { Star, MessageSquare, AlertCircle, CheckCircle2 } from 'lucide-react';
 
 const Feedback = () => {
@@ -16,7 +16,7 @@ const Feedback = () => {
   // Fetch all reviews from backend
   const fetchFeedbacks = async () => {
     try {
-      const response = await fetch('http://localhost:5000/api/feedback');
+      const response = await fetch(`${API_URL}/feedback`);
       if (response.ok) {
         const data = await response.json();
         setFeedbacks(data);

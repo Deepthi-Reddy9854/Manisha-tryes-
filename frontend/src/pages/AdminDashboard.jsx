@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef, useCallback } from 'react';
 import { useLocation, Link, useNavigate } from 'react-router-dom';
-import { useAuth } from '../context/AuthContext';
+import { useAuth, API_URL } from '../context/AuthContext';
 import { 
   ShieldAlert, 
   ShoppingBag, 
@@ -211,7 +211,7 @@ const AdminDashboard = () => {
     if (!token) return;
 
     // Establish Server-Sent Events stream
-    const API_BASE = 'http://localhost:5000/api';
+    const API_BASE = API_URL;
     const es = new EventSource(`${API_BASE}/notifications/stream?token=${token}`);
     eventSourceRef.current = es;
 

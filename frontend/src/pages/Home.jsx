@@ -1,5 +1,6 @@
 import { useState, useEffect, useRef } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
+import { API_URL } from '../context/AuthContext';
 import { Star, Truck, ShieldCheck, Warehouse, Phone, Mail, MapPin, Clock, Send, Loader2 } from 'lucide-react';
 
 const Home = () => {
@@ -25,7 +26,7 @@ const Home = () => {
   useEffect(() => {
     const fetchReviews = async () => {
       try {
-        const response = await fetch('http://localhost:5000/api/feedback');
+        const response = await fetch(`${API_URL}/feedback`);
         if (response.ok) {
           const data = await response.json();
           setHomeReviews(data.slice(0, 3));
