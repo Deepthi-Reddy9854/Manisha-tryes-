@@ -27,16 +27,33 @@ app.use(cors({
 
 app.use(express.json());
 
-// Mount API Endpoints
+// Mount API Endpoints (both with /api prefix for local dev and without for Vercel Services routing)
 app.use('/api/auth', authRoutes);
+app.use('/auth', authRoutes);
+
 app.use('/api/products', productRoutes);
+app.use('/products', productRoutes);
+
 app.use('/api/orders', orderRoutes);
+app.use('/orders', orderRoutes);
+
 app.use('/api/shops', shopRoutes);
+app.use('/shops', shopRoutes);
+
 app.use('/api/users', userRoutes);
+app.use('/users', userRoutes);
+
 app.use('/api/notifications', notificationRoutes);
+app.use('/notifications', notificationRoutes);
+
 app.use('/api/feedback', feedbackRoutes);
+app.use('/feedback', feedbackRoutes);
+
 app.use('/api/delivery', deliveryRoutes);
+app.use('/delivery', deliveryRoutes);
+
 app.use('/api/manager', managerRoutes);
+app.use('/manager', managerRoutes);
 
 // Health check endpoint
 app.get('/health', (req, res) => {
