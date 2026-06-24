@@ -284,13 +284,13 @@ const Home = () => {
               </a>
               
               {/* Email item */}
-              <a href="mailto:Manishamaxx@gmail.com" className="flex items-center gap-4 group p-1 rounded-2xl hover:bg-gray-50 dark:hover:bg-gray-955 transition-colors">
+              <a href="mailto:deepthibolla07@gmail.com" className="flex items-center gap-4 group p-1 rounded-2xl hover:bg-gray-50 dark:hover:bg-gray-955 transition-colors">
                 <div className="w-10 h-10 rounded-xl bg-indigo-50 dark:bg-indigo-950/30 text-indigo-600 dark:text-indigo-400 flex items-center justify-center border border-indigo-100 dark:border-indigo-900/20 group-hover:scale-105 transition-transform">
                   <Mail className="w-4 h-4" />
                 </div>
                 <div className="truncate">
                   <span className="block text-[10px] text-gray-400 uppercase font-bold tracking-wider">Email Address</span>
-                  <span className="text-sm font-extrabold text-gray-850 dark:text-gray-250 group-hover:text-indigo-650 transition-colors truncate block max-w-[200px] md:max-w-none">Manishamaxx@gmail.com</span>
+                  <span className="text-sm font-extrabold text-gray-850 dark:text-gray-250 group-hover:text-indigo-650 transition-colors truncate block max-w-[200px] md:max-w-none">deepthibolla07@gmail.com</span>
                 </div>
               </a>
               

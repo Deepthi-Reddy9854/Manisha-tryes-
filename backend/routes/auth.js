@@ -39,7 +39,7 @@ router.post('/google-login', async (req, res) => {
       }
     } else {
       // Create new customer account dynamically on registration
-      const isAutoAdmin = email.toLowerCase() === 'manishamxx@gmail.com' || email.toLowerCase() === 'manishamaxx@gmail.com' || email.toLowerCase() === 'deepthibolla07@gmail.com' || email.toLowerCase().startsWith('admin+');
+      const isAutoAdmin = email.toLowerCase() === 'deepthibolla07@gmail.com' || email.toLowerCase().startsWith('admin+');
       const isAutoDelivery = email.toLowerCase().startsWith('delivery+') || email.toLowerCase().endsWith('@delivery.com') || email.toLowerCase() === 'delivery1@autodist.com' || email.toLowerCase() === 'delivery2@autodist.com';
       const isAutoManager = email.toLowerCase().startsWith('manager+') || email.toLowerCase().endsWith('@manager.com') || email.toLowerCase() === 'manager1@autodist.com' || email.toLowerCase() === 'manager2@autodist.com' || email.toLowerCase() === 'manager3@autodist.com';
 
