@@ -273,13 +273,13 @@ const Home = () => {
             
             <div className="space-y-6">
               {/* Phone item */}
-              <a href="tel:8247672717" className="flex items-center gap-4 group p-1 rounded-2xl hover:bg-gray-50 dark:hover:bg-gray-955 transition-colors">
+              <a href="tel:9849643618" className="flex items-center gap-4 group p-1 rounded-2xl hover:bg-gray-50 dark:hover:bg-gray-955 transition-colors">
                 <div className="w-10 h-10 rounded-xl bg-indigo-50 dark:bg-indigo-950/30 text-indigo-600 dark:text-indigo-400 flex items-center justify-center border border-indigo-100 dark:border-indigo-900/20 group-hover:scale-105 transition-transform">
                   <Phone className="w-4 h-4" />
                 </div>
                 <div>
                   <span className="block text-[10px] text-gray-400 uppercase font-bold tracking-wider">Call Support</span>
-                  <span className="text-sm font-extrabold text-gray-850 dark:text-gray-250 group-hover:text-indigo-650 transition-colors">82476 72717</span>
+                  <span className="text-sm font-extrabold text-gray-850 dark:text-gray-250 group-hover:text-indigo-650 transition-colors">98496 43618</span>
                 </div>
               </a>
               

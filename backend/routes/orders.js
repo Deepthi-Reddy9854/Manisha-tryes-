@@ -134,6 +134,7 @@ router.post('/', verifyToken, async (req, res) => {
       totalPrice: parseFloat(calculatedTotal.toFixed(2)),
       status: 'Pending',
       deliveryDetails,
+      paymentMethod: req.body.paymentMethod || 'Cash on Delivery (COD)',
       gstNumber: req.body.gstNumber || '',
       deliveryBoyId: null,
       deliveryBoyName: null,

@@ -130,6 +130,7 @@ const Cart = () => {
 👤 *Customer Name:* ${order.deliveryDetails?.name || ''}
 📞 *Phone Number:* ${order.deliveryDetails?.phone || ''}
 📍 *Location:* ${order.deliveryDetails?.address || ''}
+💳 *Payment Method:* Cash on Delivery (COD) Only
 
 🛍️ *Order Items:*
 ${itemsList}
@@ -137,7 +138,7 @@ ${itemsList}
 💰 *Total Billing:* ₹${formattedTotal}
 ----------------------------------`;
 
-    return `https://api.whatsapp.com/send?phone=918247672717&text=${encodeURIComponent(message)}`;
+    return `https://api.whatsapp.com/send?phone=919849643618&text=${encodeURIComponent(message)}`;
   };
 
   const handleCheckoutSubmit = async (e) => {
@@ -171,7 +172,7 @@ ${itemsList}
           deductPoints: redeemPoints,
           gstNumber: '',
           couponCode: appliedCoupon?.code || null,
-          paymentMethod: 'WhatsApp Message',
+          paymentMethod: 'Cash on Delivery (COD)',
           totalPrice: finalTotal
         })
       });
@@ -229,9 +230,9 @@ ${itemsList}
             <span>Location:</span>
             <span>{orderConfirmed.deliveryDetails?.address}</span>
           </div>
-          <div className="flex justify-between font-semibold border-t border-gray-100 dark:border-gray-800 pt-2 text-gray-400">
-            <span>Order Method:</span>
-            <span>WhatsApp Message</span>
+          <div className="flex justify-between font-semibold border-t border-gray-150 dark:border-gray-800 pt-2">
+            <span>Payment Method:</span>
+            <span className="text-indigo-600 dark:text-indigo-400 font-bold">Cash on Delivery (COD) Only</span>
           </div>
           <div className="flex justify-between border-t border-gray-200 dark:border-gray-800 pt-2 font-bold text-sm text-gray-900 dark:text-white">
             <span>Total Billing:</span>
@@ -549,6 +550,19 @@ ${itemsList}
                   onChange={handleInputChange}
                   className="block w-full px-3 py-1.5 text-xs border border-gray-300 dark:border-gray-700 rounded-none bg-gray-50 dark:bg-gray-950 focus:outline-none focus:ring-1 focus:ring-black dark:text-white"
                 />
+              </div>
+
+              <div className="space-y-2 border-t border-gray-100 dark:border-gray-800 pt-3">
+                <label className="block text-[10px] font-bold text-gray-400 uppercase tracking-wider">Payment Method</label>
+                <div className="flex items-center p-3 border border-indigo-200 dark:border-indigo-900 bg-indigo-50/50 dark:bg-indigo-950/20 text-xs font-semibold rounded-none">
+                  <div className="flex-1 text-left">
+                    <span className="block font-black text-gray-900 dark:text-white uppercase tracking-wider text-[11px]">Cash on Delivery (COD)</span>
+                    <span className="text-[10px] text-gray-500 dark:text-gray-400 block mt-0.5 font-normal leading-normal">Only Cash on Delivery is accepted. UPI (PhonePe, Google Pay, etc.) is not supported.</span>
+                  </div>
+                  <div className="w-4 h-4 rounded-full border-4 border-indigo-600 bg-indigo-600 flex items-center justify-center shrink-0">
+                    <div className="w-1.5 h-1.5 rounded-full bg-white"></div>
+                  </div>
+                </div>
               </div>
 
               <button
